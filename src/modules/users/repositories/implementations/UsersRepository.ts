@@ -57,11 +57,11 @@ class UsersRepository implements IUsersRepository {
 
     // registrando alteração no array de users
     this.users = this.users.map((registeredUser) => {
-      console.log(registeredUser);
-
+      // Inserindo a alteração do novo usuário admin no array principal
       if (registeredUser.id === user.id) {
         return user;
       }
+      // Se não foi o usuário atualizado, não muda nada
       return registeredUser;
     });
 

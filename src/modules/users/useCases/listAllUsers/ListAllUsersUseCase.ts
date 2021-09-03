@@ -16,7 +16,7 @@ class ListAllUsersUseCase {
     }
 
     if (!isUserAdmin.admin) {
-      throw new Error("Você nã tem permissão para realizar essa ação");
+      throw new Error("Você não tem permissão para realizar essa ação");
     }
 
     return this.usersRepository.list();
